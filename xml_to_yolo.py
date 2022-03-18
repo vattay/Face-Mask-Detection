@@ -50,7 +50,7 @@ def xml_to_txt(input_path: str, output_path: str):
             txt_list.append(class_mapping.get(c) + " " + " ".join([str(l) for l in bb]) + "\n")
 
         print(f"Building: {f_name.split('.')[0]}.txt")
-        with open(output_path + "\\" + f_name.split(".")[0] + ".txt", "w") as writer:
+        with open(output_path + "/" + f_name.split(".")[0] + ".txt", "w") as writer:
             for obj in txt_list:
                 writer.write(obj)
     
